@@ -1,0 +1,24 @@
+{% extends 'csv_app/base.html' %}
+
+{% block content %}
+    <form action="." method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit">
+    </form>
+    {% if file_name %}
+        <p>Uploaded file name: {{file_name}}</p>
+    {% endif %}
+    {% if content %}
+        <table>
+            {% for row in content %}
+            <tr>
+                {% for element in row %}
+                <td>{{element}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}
+
