@@ -1,16 +1,29 @@
 {% extends 'csv_app/base.html' %}
 
 {% block content %}
-    <form action="." method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Submit">
-    </form>
-    {% if file_name %}
-        <p>Uploaded file name: {{file_name}}</p>
-    {% endif %}
+    <p>
+        <a href="upload/">
+            Upload CSV file
+        </a>
+    </p>
     {% if content %}
         <table>
+            <tr>
+                <th>Код</th>
+                <th>Наименование</th>
+                <th>Уровень 1</th>
+                <th>Уровень 2</th>
+                <th>Уровень 3</th>
+                <th>Цена</th>
+                <th>ЦенаСП</th>
+                <th>Количество</th>
+                <th>Поля свойств</th>
+                <th>Совместные покупки</th>
+                <th>Единица измерения</th>
+                <th>Картинка</th>
+                <th>Выводить на главный экран</th>
+                <th>Описание</th>
+            </tr>
             {% for row in content %}
             <tr>
                 {% for element in row %}
