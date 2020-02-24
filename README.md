@@ -1,5 +1,10 @@
 # Django_CSV_Viewer
-Django project for processing file.csv
+This Django project for processing the file.csv. PostgreSQL is used as a database.
+
+## Starting instruction
+```python
+python manage.py runserver
+```
 
 ## Code example
 
