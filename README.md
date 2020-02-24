@@ -1,5 +1,5 @@
 # Django_CSV_Viewer
-project for processing file.csv
+Django project for processing file.csv
 
 ## Code example
 
