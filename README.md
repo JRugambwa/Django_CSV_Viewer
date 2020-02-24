@@ -21,7 +21,6 @@ def parse_csv(content):
             del row[columns_number:]
 
     return content
-    
 ```
 ##Project pages
 #### start page
